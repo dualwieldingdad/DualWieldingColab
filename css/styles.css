@@ -1,0 +1,296 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #101820;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('img/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s forwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    position: relative;
+    padding: 20px 0; /* Further reduced padding for less space */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .header-content ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px; /* Narrower width */
+        height: 20px; /* Taller height */
+        background-color: #FFFFFF; /* White color */
+        animation: blink 1s step-end infinite;
+    }
+
+.header h1 {
+    margin-bottom: 10px; /* Reduced margin for less space */
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Reduced margin for less space */
+}
+
+.content {
+    padding: 20px; /* Reduced padding for less space */
+    background-color: #101820;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 10px auto; /* Further reduced margin for less space */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Adjust this for desired width */
+    margin: 0 auto;
+}
+
+/* Style for all lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+    ul li {
+        position: relative;
+        padding-left: 30px; /* Space for the blinking cursor */
+        margin-bottom: 10px;
+    }
+
+        ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #0085CA; /* Your blue color */
+            font-size: 20px; /* Adjust size if needed */
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+/* Center the contact container on the screen */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    width: 35%; /* Adjust this value as needed */
+    margin: 0 auto; /* This will center the container */
+}
+
+    /* Style for the contact info */
+    .contact-container ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+        .contact-container ul li {
+            position: relative;
+            padding-left: 30px; /* Space for the blinking cursor */
+            margin-bottom: 10px;
+        }
+
+            .contact-container ul li::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px; /* Narrower width */
+                height: 20px; /* Taller height */
+                background-color: #FFFFFF; /* White color */
+                animation: blink 1s step-end infinite;
+            }
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #FFFFFF;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+}
+.package {
+    border: 2px solid #0085CA;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+    .package:hover {
+        transform: translateY(-10px);
+    }
+
+.package-title {
+    background-color: #0085CA;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+    .cta button {
+        background-color: #0085CA;
+        color: #FFFFFF;
+        border: none;
+        padding: 15px 30px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s;
+    }
+
+        .cta button:hover {
+            background-color: #006BA0;
+        }
+
+.photo {
+    width: 100%;
+    height: 200px;
+    background-color: #BFC0BF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #101820;
+    transition: transform 0.3s;
+}
+
+    .photo:hover {
+        transform: scale(1.05);
+    }
+
+.photo-grid {
+    display: flex;
+    justify-content: center; /* Center the circles horizontally */
+    align-items: center; /* Center the circles vertically */
+}
+
+.photo-circle {
+    width: 150px; /* Initial size of the circle */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s; /* Animation effect */
+    margin: 0 10px; /* Add horizontal margins to each circle */
+}
+
+    .photo-circle:hover {
+        transform: scale(1.1); /* Makes the circle 10% bigger on hover */
+    }
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 20px; /* Space between icons */
+}
+
+.social-icon {
+    text-align: center; /* Center the label and image */
+    transition: transform 0.3s ease-in-out;
+}
+
+    .social-icon:hover {
+        transform: scale(1.1); /* Enlarge the icon slightly on hover */
+    }
+
+    .social-icon img {
+        width: 60px; /* Adjust the size as needed */
+        height: 60px;
+        border-radius: 50%; /* Make it circular */
+        display: block;
+        margin: 0 auto; /* Center the image horizontally */
+        animation: float 2s infinite; /* Apply the floating animation */
+    }
+
+.social-icon {
+    margin-top: 5px; /* Adjust space between the icon and the label */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #0085CA; /* Your blue color */
+}
+
+    .email-button {
+        background-color: #0085CA;
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+
+    .email-button:hover {
+        background-color: #006BA0; /* A slightly darker blue for hover effect */
+    }
