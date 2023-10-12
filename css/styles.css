@@ -11,6 +11,19 @@
     background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .header-content, .content {
+        padding: 15px;
+    }
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
